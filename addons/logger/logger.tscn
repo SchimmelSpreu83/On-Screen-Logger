@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpfunq8fyixco"]
+
+[ext_resource type="Script" uid="uid://8rl8c8ax2bsu" path="res://addons/logger/logger.gd" id="1_thwo5"]
+
+[node name="Logger" type="CanvasLayer"]
+process_mode = 3
+layer = 128
+follow_viewport_enabled = true
+script = ExtResource("1_thwo5")
+log_limit = 30
+
+[node name="LogLabel" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0.498039)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+drag_and_drop_selection_enabled = false
