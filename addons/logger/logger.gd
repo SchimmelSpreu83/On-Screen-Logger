@@ -59,7 +59,9 @@ func print_msg(text: String, duration: float = DEFAULT_DURATION, type: ErrTypes 
 	
 	var timer := Timer.new()
 	timer.one_shot = true
-	timer.ignore_time_scale = true
+	
+	if &"ignore_time_scale" in timer: # Backwards compatibility to Godot 4.2.
+		timer.ignore_time_scale = true
 	
 	msg_uid.append(absi(timer.get_instance_id()))
 	
